@@ -19,6 +19,10 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework.permissions import IsAuthenticated
 
 
+# be236d1e9948c7a867d2afd92e0b400a secret key
+# 592084927852037 app id
+
+
 # Create your views here.
 
 class UserCreateAPIView(generics.ListCreateAPIView):

@@ -6,6 +6,7 @@ from rest_framework.authtoken import views
 
 urlpatterns = [
     url(r'api-auth/', views.obtain_auth_token),
+    url(r'^auth/', include('rest_framework_social_oauth2.urls')),
     url(r'^account/', include('accounts.urls', namespace='account')),
     url(r'^docs/', include('rest_framework_docs.urls')),
     url(r'^admin/', admin.site.urls),

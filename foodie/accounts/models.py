@@ -16,7 +16,7 @@ from django.core.validators import RegexValidator
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(unique=True,max_length=25)
-    email = models.EmailField(unique=True,max_length=254 )
+    email = models.EmailField(max_length=254 )
     first_name = models.CharField(max_length=15)
     last_name = models.CharField(max_length=15)
 
