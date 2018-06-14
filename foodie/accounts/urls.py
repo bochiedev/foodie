@@ -9,7 +9,9 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^register/$', UserCreateAPIView.as_view(), name='register'),
-    url(r'^organization/register/$', OrgCreateAPIView.as_view(), name='register_org'),
+    url(r'^org/register/$', OrgCreateAPIView.as_view(), name='register_org'),
+    url(r'^org/list/$', OrgRetrieveAPIView.as_view(), name='view_org'),
+
 
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

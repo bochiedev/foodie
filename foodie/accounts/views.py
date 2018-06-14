@@ -50,3 +50,14 @@ class OrgCreateAPIView(generics.ListCreateAPIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer._errors,status=status.HTTP_400_BAD_REQUEST)
+
+
+
+class OrgRetrieveAPIView(generics.ListCreateAPIView):
+    serializer_class = OrgCreateSerializer
+    permission_classes = [permissions.AllowAny]
+    queryset = Organization.objects.all()
+
+    def get(self, request, format=None):
+        org = Organization.objects.all().values("id","name","email","admin_id__username","admin_id")
+        return Response(data={"Organizations":org}, status=status.HTTP_200_OK)
