@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^register/$', UserCreateAPIView.as_view(), name='register'),
     url(r'^org/register/$', OrgCreateAPIView.as_view(), name='register_org'),
     url(r'^org/list/$', OrgRetrieveAPIView.as_view(), name='view_org'),
+    url(r'^payment/pay/$', PayAPIView.as_view(), name='pay'),
 
 
 

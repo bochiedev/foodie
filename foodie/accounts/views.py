@@ -17,8 +17,12 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
+import requests
+from requests.auth import HTTPBasicAuth
+import base64
+import datetime
 
-
+# fb keys
 # be236d1e9948c7a867d2afd92e0b400a secret key
 # 592084927852037 app id
 

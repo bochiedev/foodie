@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework_docs',
     'rest_framework.authtoken',
     'accounts',
+    'payments',
     'oauth2_provider',
     'social_django',
     'rest_framework_social_oauth2',
