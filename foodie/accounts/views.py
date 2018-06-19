@@ -21,10 +21,15 @@ import requests
 from requests.auth import HTTPBasicAuth
 import base64
 import datetime
+<<<<<<< HEAD
 import time
 import calendar
 
     # FACEBOOK LOGIN API
+=======
+
+# fb keys
+>>>>>>> d3258e0e9d8ccaa19a5ade6fd757bea2cbec884c
 # be236d1e9948c7a867d2afd92e0b400a secret key
 # 592084927852037 app id
 
