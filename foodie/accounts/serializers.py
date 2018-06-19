@@ -139,3 +139,13 @@ class OrgCreateSerializer(serializers.ModelSerializer):
         )
         org_obj.save()
         return validated_data
+
+class MpesaOauthSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MpesaOauth
+        fields = [
+            'id',
+            'access_token',
+            'expires_in',
+        ]

@@ -86,6 +86,17 @@ class Delivery(Group):
     def __str__(self):
         return self.name
 
+class MpesaPayment(models.Model):
+    phone = models.CharField(max_length=30)
+    status = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.phone
+class MpesaOauth(models.Model):
+    access_token = models.CharField(max_length=255)
+    expires_in = models.CharField(max_length=255)
+
+
 
 
 

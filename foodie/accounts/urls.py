@@ -11,6 +11,9 @@ urlpatterns = [
     url(r'^register/$', UserCreateAPIView.as_view(), name='register'),
     url(r'^org/register/$', OrgCreateAPIView.as_view(), name='register_org'),
     url(r'^org/list/$', OrgRetrieveAPIView.as_view(), name='view_org'),
+    url(r'^mpesa/$', MakeSafPaymentAPIView.as_view(), name='mpesa'),
+    url(r'^mpesa_get/$', GetSafPaymentTokenAPIView.as_view(), name='mpesa'),
+    url(r'^mpesa_pay/$', PaymentsApiView.as_view(), name='mpesa_pay'),
 
 
 
